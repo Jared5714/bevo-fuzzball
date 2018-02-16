@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <title th:text="${title}">Default Title</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+    <nav th:fragment = "navigation" class="navbar navbar-toggleable-sm navbar-light bg-faded">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="/index">Home |<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/player">Players |</a>
+            <a class="nav-item nav-link" href="/team">Teams |</a>
+            <a class="nav-item nav-link" href="/stats">Stats</a>
+        </div>
+    </div>
+</nav>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace = "fragments :: head"></head>
+
+<nav th:replace = "fragments :: nav"></nav>
+<body class = "container">
+<h1 th:text ="${player.name}"></h1>
+<form method="post" style="max-width:100px;" th:object = "${offense}">
+    <div class="form-group">
+        <label th:for="hits">Hits</label>
+        <input class="form-control" th:field = "*{hits}"/>
+    </div>
+    <div class="form-group">
+        <label th:for="atbats">At Bats</label>
+        <input class="form-control" th:field = "*{atBats}"/>
+    </div>
+    <div class="form-group">
+        <label th:for="walks">Walks</label>
+        <input class="form-control" th:field = "*{walks}"/>
+    </div>
+    <div class="form-group">
+        <label th:for="hitbypitch">Hit By Pitch</label>
+        <input class="form-control" th:field = "*{hitByPitch}"/>
+    </div>
+    <div class="form-group">
+        <label th:for="singles">Singles</label>
+        <input class="form-control" th:field = "*{singles}"/>
+    </div>
+    <div class="form-group">
+        <label th:for="doubles">Double</label>
+        <input class="form-control" th:field = "*{doubles}"/>
+    </div>
+    <div class="form-group">
+        <label th:for="triples">Triples</label>
+        <input class="form-control" th:field = "*{triples}"/>
+    </div>
+    <div class="form-group">
+        <label th:for="homeruns">Home Runs</label>
+        <input class="form-control" th:field = "*{homeRuns}"/>
+    </div>
+    <div class="form-group">
+    </div>
+
+    <input type="submit" value="Add Stats" />
+</form>
+
+</body>
+</html>

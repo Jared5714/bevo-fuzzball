@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace = "fragments :: head"></head>
+
+<nav th:replace = "fragments :: nav"></nav>
+<body class = "container">
+<form method="post" style="max-width:600px;" th:object = "${teams}">
+    <div class="form-group">
+        <label th:for="name">Team name</label>
+        <input class="form-control" th:field = "*{name}"/>
+    </div>
+    <div class="form-group">
+        <label th:for="wins" >Wins</label>
+        <input class="form-control" th:field = "*{wins}"/>
+    </div>
+    <div class="form-group">
+        <label th:for="loses">Loses</label>
+        <input class="form-control" th:field = "*{loses}"/>
+    </div>
+
+    <input type="submit" value="Add Team" />
+</form>
+
+<ul th:each = "team : ${teams}">
+    <li th:text = "${team.name}"></li>
+</ul>
+
+</body>
+</html>

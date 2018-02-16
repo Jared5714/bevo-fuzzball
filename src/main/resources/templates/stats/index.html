@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<nav th:replace = "fragments :: navigation"></nav>
+<body class = "container">
+<h1>Connection Test</h1>
+
+<table class = "table">
+    <thead class = "thead-inverse">
+    <tr>
+        <th>Sortable Stats</th>
+    </tr>
+    </thead>
+    <thead class = "thead-light">
+    <tr>
+        <th>AB</th>
+        <th>H</th>
+        <th>HR</th>
+        <th>BB</th>
+        <th>TB</th>
+        <th>AVG</th>
+        <th>OBP</th>
+        <th>SLG</th>
+        <th>OPS</th>
+    </tr>
+    <tr th:each = "stat : ${stats}">
+        <td th:text = "${stat.atBats}"></td>
+        <td th:text = "${stat.hits}"></td>
+        <td th:text = "${stat.homeRuns}"></td>
+        <td th:text = "${stat.walks}"></td>
+        <td th:text = "${stat.totalBases}"></td>
+        <td th:text = "${stat.battingAverage}"></td>
+        <td th:text = "${stat.onBase}"></td>
+        <td th:text = "${stat.slug}"></td>
+        <td th:text = "${stat.OPS}"></td>
+    </tr>
+    </thead>
+    
+</table>
+
+</body>
+</html>
